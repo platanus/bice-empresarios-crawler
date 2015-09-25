@@ -25,7 +25,7 @@ class CartolaProvisoriaReducer < Crabfarm::BaseReducer
   end
 
   def get_date(date_element)
-    clean_str(date_element.text)
+    Date.strptime(clean_str(date_element.text),"%d-%m")
   end
 
   def get_document(document_element)

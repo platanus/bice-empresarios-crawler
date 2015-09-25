@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'date'
 
 describe CartolaProvisoriaReducer do
   it "should return the transactions", reducing: 'cartola', live: true do
@@ -6,7 +7,7 @@ describe CartolaProvisoriaReducer do
   end
 
   it "should parse the date", reducing: 'cartola' do
-    expect(reducer.transactions[0].date).to eq("25-09")
+    expect(reducer.transactions[0].date).to eq(Date.new(2015,9,25))
   end
 
   it "should parse the document", reducing: 'cartola' do
