@@ -1,4 +1,3 @@
-require 'pry'
 class Login < Crabfarm::BaseNavigator
 
   def run
