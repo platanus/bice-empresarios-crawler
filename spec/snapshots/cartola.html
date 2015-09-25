@@ -1,0 +1,2697 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+		
+		<script language="javascript">
+
+function $criptoNameFun(str,opt){
+	if(opt==1){
+	 return AESEncode(str,tituloCabecera); 
+	}else if(opt == 2){
+	 return AESEncode_(str,tituloCabecera);
+	}
+}
+
+
+</script>		<style id="login_bice" type="text/css">
+@charset "UTF-8";
+/* CSS Document */
+
+#warning img, div.initialtext img, #metoo1 img {
+	display: none;
+}
+
+#warning div, div.initialtext div, #metoo1 div {
+	display: none;
+}
+
+#metoo1 center {
+	display: none;
+}
+
+#warning, div.initialtext, #metoo1 {
+	height: 390px;
+	border-style: none !important;
+	background: #990000 url(https://www.bice.cl/images/aviso.gif) no-repeat center top !important;
+}
+
+</style>		<link rel="stylesheet" type="text/css" href="https://www.bice.cl/templates/css/bice/fuentes_bice.css" />
+		<link rel="SHORTCUT ICON" href="https://www.bice.cl/images/gfx/biceico.ico" type="image/x-icon" />
+		<script language="javascript" src="https://www.bice.cl/templates/js/bice/layers.js"></script>
+		<script language="javascript" src="https://www.bice.cl/templates/js/bice/format2.js"></script>
+		<script language="javascript" src="https://www.bice.cl/templates/js/bice/layersNewMenu.js"></script>
+		<script language="javascript" src="https://www.bice.cl/templates/js/bice/layers_openclose.js"></script>
+		<script language="javascript" src="https://www.bice.cl/templates/js/bice/rollover.js"></script>
+
+				
+						
+				
+				
+				
+		<script language="javascript" src="https://www.bice.cl/templates/js/bice/ppt.js?0145637635;MDc2MjExNjYxODsxMDI7YmljZS9jdWVudGFzL2NjL0N0YUNhcnRQcm92My52bTsyMDE1LTA5LTI0OzE3OjU2OjI5O19nYT1HQTEuMi4xMzU4NTkzNzY2LjE0NDMxMjgxODc7IF9nYXQ9MTsgT0FYPXZ0ZkdIVllFWTNvQURCb3E7IEpTRVNTSU9OSUQ9MmIxNTljNWY0ZGI2NDAzZWFlMjZlMWI2ZTE1NzNjMmI="></script>
+		
+		<title> Banco BICE </title>
+
+		<style>
+			H1.SaltoDePagina
+			  {
+			     PAGE-BREAK-AFTER: always
+			  }
+		 
+		</style>
+		
+				<link href="https://www.bice.cl/images/admcont/ofertasBanner/ofertas.css" rel="stylesheet" type="text/css" />		
+		
+				<script language="javascript" src="https://www.bice.cl/templates/js/bice/delegado.js"></script>		
+		<link href="https://www.bice.cl/templates/css/bice/portal/general.css" rel="stylesheet" type="text/css" />
+		<link href="https://www.bice.cl/templates/css/bice/portal/personas.css" rel="stylesheet" type="text/css" />
+		
+		<!--JQUERY-->
+		<script src="https://www.bice.cl/templates/js/bice/portal/jquery-latest.js" type="text/javascript"></script>
+		<script src="https://www.bice.cl/templates/js/bice/portal/jquery-ui-1.10.0.custom.min.js" type="text/javascript"></script>
+
+		<link rel="stylesheet" href="https://www.bice.cl/templates/css/bice/portal/jquery-ui.css" type="text/css" />
+
+		<script type="text/javascript">		
+		
+			if(navigator.platform == 'iPad'){
+				document.write('&lt;meta name="viewport" content="initial-scale=0.69"&gt;');
+			}
+			
+			var posicionMenu = 0;
+			
+			function isIE() {
+				var myNav = navigator.userAgent.toLowerCase();
+				return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+			}			
+			
+			$(document).ready(function(){				
+				// DROPDOWNS MENU PRINCIPAL
+				
+				$('ul#nav-list.dd li').click(function(){
+					if (posicionMenu == 0){
+						$("ul#nav-list.dd li").each(function(){					  					  
+							$(this).children('ul.drop').stop(true, true).delay(1).slideUp('fast');
+							$(this).removeClass('topmenu');
+						});
+						$(this).addClass('topmenu');
+						$(this).children('ul.drop').stop(true, true).delay(100).slideDown('fast');
+						posicionMenu = 1;
+					}else{
+						$(this).children('ul.drop').stop(true, true).delay(100).slideUp('fast');
+						posicionMenu = 0;
+					}
+				});
+
+				$('ul#nav-list.dd li').mouseleave(function(){
+					$(this).children('ul.drop').stop(true, true).delay(50).slideUp('fast');
+					posicionMenu = 0;
+				});
+
+				// MARCAS
+				$('#marcas .bloque_marcas a:nth-child(6n+6)').css('margin-right', 0);
+
+				// BENEFICIOS
+				$('#detalle_beneficios .beneficio:first-child').css('margin-right', '70px');
+
+				//OPCIONES CLIENTES
+				$('#opciones_clientes form label:nth-child(2n+2)').css('margin-right', '0px');
+				var control_opciones = 0;
+				$('#boton_opciones').click(function(){
+					if (control_opciones == 0) {
+						$('#opciones_clientes').show('fade', 200);
+						control_opciones = 1;
+					} else {
+						$('#opciones_clientes').hide('fade', 200);
+						control_opciones = 0;
+					}
+				});
+
+				// HOME CLIENTES
+				var hcont = $('#contenedor.home_clientes #cont_der').height();
+				$('#contenedor.home_clientes #cont_izq').height(hcont);
+				
+				
+				//SOLUCION A PROBLEMAS CON IE INICIO	
+			    var myNav = navigator.userAgent.toLowerCase();
+                var versionIE = (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false
+
+				if (versionIE == 8 || versionIE == 7) {								
+					//LINEAS REPETIDAS EN IE8 INICIO
+					$("td").each(function(){					  
+					  
+					 if($(this).attr('background') != undefined){
+						 var n = $(this).attr('background').indexOf("sombra5.gif");
+						 if(n &gt; -1){							
+						 } else{
+						 $(this).html("");
+						 }							 
+					 
+					 }
+					});//LINEAS REPETIDAS EN IE8 FIN	
+					
+					//ALINEACION DE CAMPOS EN IE8 INICIO
+					
+					$("td").each(function(){					  					  
+						 if($(this).attr('align') != undefined){
+							if($(this).attr("align") == 'left'){
+								$(this).attr("style","text-align: left !important;");
+							}	
+							if($(this).attr("align") == 'rigth'){
+								$(this).attr("style","text-align: right !important;");
+							}
+							if($(this).attr("align") == 'center'){
+								$(this).attr("style","text-align: center !important;");
+							}							
+						 }else{
+							$(this).attr("style","text-align: left !important;");
+						 }
+					});		
+					
+					$("span").each(function(){					  					  
+						 if($(this).attr('class') != undefined){
+							
+							var n1 = $(this).attr('class').indexOf("verFFFbold9");
+							var n2 = $(this).attr('class').indexOf("ver333bold8");								
+							if(n1 &gt; -1){                                
+								 $(this).parent().attr("style","text-align: left !important;");								 
+							} else if(n2 &gt; -1){
+								$(this).parent().attr("style","text-align: left !important;");		
+							}						
+						 }
+					});					
+					
+					//ALINEACION DE CAMPOS EN IE8 FIN
+				}
+				if (versionIE == 9){
+					$("td").each(function(){					  					  
+						 if($(this).attr('align') != undefined){
+							if($(this).attr("align") == 'left'){
+								$(this).attr("style","text-align: left !important;");
+							}	
+							if($(this).attr("align") == 'rigth'){
+								$(this).attr("style","text-align: right !important;");
+							}
+							if($(this).attr("align") == 'center'){
+								$(this).attr("style","text-align: center !important;");
+							}							
+						 }else{
+							$(this).attr("style","text-align: left !important;");
+						 }
+					});		
+				}
+			//SOLUCION A PROBLEMAS CON IE FIN
+			});
+		</script>
+
+		<!-- CLASES MENU LATERAL -->
+		<script type="text/javascript" src="https://www.bice.cl/templates/js/bice/portal/lateral.js"></script>
+
+		<!--  MENU ACORDEON -->
+		<link rel="stylesheet" type="text/css" href="https://www.bice.cl/templates/css/bice/portal/style_menu.css" />
+		<link href="https://www.bice.cl/templates/css/bice/portal/general_print.css" media="print" rel="stylesheet" type="text/css" />
+				<!-- IE 7 CSS -->
+		<!--[if gte IE 7]>
+		<link rel="stylesheet" type="text/css" href="https://www.bice.cl/templates/css/bice/portal/ie/ie7_general.css"  media="screen" charset="utf-8" />
+		<![endif]-->  
+		
+		<script>
+			function initMenu() {
+			 
+				$('#menu ul').hide(); 
+				$('#menu li a').click(
+			 
+					function() {
+			 
+					var checkElement = $(this).next();
+					 
+					if((checkElement.is('ul')) &amp;&amp; (checkElement.is(':visible'))) {
+						checkElement.slideUp('normal');
+						return false;
+					}
+					 
+					if((checkElement.is('ul')) &amp;&amp; (!checkElement.is(':visible'))) {
+					 
+						$('#menu ul:visible').slideUp('normal');
+					 
+						checkElement.stop(true, true).slideDown('normal');
+					 
+						return false;
+					 
+					}
+					 
+				}
+					 
+				);
+					 
+			}
+			 
+			$(document).ready(function(){
+				initMenu();
+				//ELIMINA ULTIMA LINEA DE LI LI DEL MENU 
+				$('.sub-menu-list li:last-child').css("border-bottom", "0px");
+			});
+		</script>
+	</head>
+	
+    	<body>
+			
+<!--CONTENEDOR-->
+<div id="contenedor" class="home_clientes">
+
+<!--CABECERA-->
+<div id="cabecera">
+    
+    <!--Utilitarios-->
+    <div id="utilitarios">
+        <ul>	
+
+						<li><a href="javascript:BiCEsend('450')" title="Home"><img class="imgHome" src="https://www.bice.cl/images/portal/general/home.png" alt="" /></a></li>
+		
+						<li><a href="https://www.bice.cl/bice/servlet/bice/template/bice%2Cayuda%2CAyuContacto.vm" title="Contacto"><img class="imgContacto" src="https://www.bice.cl/images/portal/general/util_contacto.png" alt="" /></a></li>
+        
+						<li><a href="https://www.bice.cl/bice/servlet/bice/template/bice%2Cservicios%2Cinformacion%2Cfaq.vm/IsLogin/java.lang.Object%4014828e7" title="Preguntas Frecuentes"><img class="imgPreguntas" src="https://www.bice.cl/images/portal/general/util_preguntas.png" alt="" /></a></li>
+           
+						<li><a href="https://www.bice.cl/bice/servlet/bice/template/bice%2Cservicios%2Cinformacion%2Cseguridad.vm/IsLogin/java.lang.Object%4014828e7" title="Seguridad"><img class="imgSeguridad" src="https://www.bice.cl/images/portal/general/util_seguridad.png" alt="" /></a></li>
+			
+						<li><a href="javascript:BiCEsend('370')" title="Mapa del sitio"><img class="imgMapa" src="https://www.bice.cl/images/portal/general/util_mapa.png" alt="" /></a></li>
+			
+						<li><a href="javascript:BiCEsend('650')" title="Emergencias"><img class="imgEmergencias" src="https://www.bice.cl/images/portal/general/alerta.png" alt="" /></a></li>
+      			
+						<li class="cerrar_sesion"><img class="imgLogout" src="https://www.bice.cl/images/portal/general/cerrar_sesion.png" onclick="javascript:document.salida.submit()" onmouseover="this.style.cursor='pointer'" alt="" /><a class="textLogout" href="javascript:document.salida.submit()">cerrar sesión</a></li>
+		</ul>
+		<div class="fecha-ultima">Fecha Actual :                 24-09-2015 <br />Fecha Último Acceso : Miércoles 23-09-2015 09:58 hrs.</div>
+    </div><!--fin utilitarios-->
+
+    <div></div><!-- Este div arregla bug de ie7 -->
+        
+    <!--Logo BancoBice-->
+    <h1 id="logo_main">
+        <a href="#">
+			<img src="https://www.bice.cl/images/portal/general/logo_Banco_BICE_fondoblanco.png" alt="" width="234" height="28" />
+		</a>        
+	</h1> <!--fin logo_main-->
+        
+	<!--Separador 1-->
+    <div class="sep1"><!--Separador_1--></div>
+	<!--Buscador-->
+        <div id="buscador">
+        					<form style="margin-bottom: 1em;">
+					<select class="select-home-portal">
+						<option value="0762116618" align="center">COMERCIAL OREBEN LIMITADA    </option>
+					</select>
+				</form>				
+						<div class="accesosDirectos">
+								<div class="nav-list-fw-ad">
+					<ul id="nav-list" class="dd"><!-- Primer Nivel -->					
+						<li class="ancho-menu menu-col-6 menu-mas">
+							<a class="ultimo" href="#">Accesos Directos &gt;</a>
+							<ul id="menuAc" class="drop">
+																																																																			<li><a href="javascript:BiCEsend('102')">Cartola Provisoria.</a></li>
+																																																																																<li><a href="javascript:BiCEsend('810','MN')">Transferencias a 3ros</a></li>
+																																													
+														
+							</ul>
+						</li>						
+					</ul>
+					<br /><br /><br />					
+				</div><!--fin nav-list-fw-->			
+			</div>
+        </div><!--fin buscador-->
+	<!--fin buscador-->	
+	<!--Menú Principal-->
+        <div class="nav-list-fw">
+            <ul id="nav-list" class="dd"><!-- Primer Nivel -->
+				<li class="ancho-menu"><a class="selec" href="javascript:BiCEsend('450')">Resumen</a></li><li class="ancho-menu menu-col-2"><a href="#">Cuentas MN</a><ul class="drop categorias"><!-- Segundo Nivel --><li>Consulta<ul class="sub-menu-list"><!-- Tercer Nivel --><li><a href="javascript:BiCEsend('101')">Saldo</a></li><li><a href="javascript:BiCEsend('102')">Cartola Provisoria</a></li><li><a href="javascript:BiCEsend('103')">Cartola Anterior</a></li><li><a href="javascript:BiCEsend('104')">Cartola Otros Períodos</a></li><li><a href="javascript:BiCEsend('106')">Consulta Cheques</a></li><li><a href="javascript:BiCEsend('970')">Cartola Financiera</a></li><li style="border-bottom-width: 0px;"><a href="javascript:BiCEsend('973')">Cartola Financiera Mensual</a></li></ul></li><li>Servicios<ul class="sub-menu-list"><!-- Tercer Nivel --><li style="border-bottom-width: 0px;"><a href="javascript:BiCEsend('107')">Nombre de Cuentas</a></li></ul></li></ul></li><li class="ancho-menu menu-col-3"><a href="#">Transferencias y Pagos</a><ul class="drop categorias"><!-- Segundo Nivel --><li>Transferencias<ul class="sub-menu-list"><!-- Tercer Nivel --><li style="border-bottom-width: 0px;"><a href="javascript:BiCEsend('810','MN')">a Terceros</a></li></ul></li><li>Mis Transfer y Pagos<ul class="sub-menu-list"><!-- Tercer Nivel --><li style="border-bottom-width: 0px;"><a href="javascript:BiCEsend('814')">Consulta Botón de Pago</a></li></ul></li><li>Pago Instituciones<ul class="sub-menu-list"><!-- Tercer Nivel --><li><a href="javascript:BiCEsend('301')">Cotizaciones Previsionales</a></li><li><a href="javascript:BiCEsend('917')">Pago de IVA</a></li><li style="border-bottom-width: 0px;"><a href="javascript:BiCEsend('918')">Pago de Renta</a></li></ul></li><li>Servicios<ul class="sub-menu-list"><!-- Tercer Nivel --><li><a href="javascript:BiCEsend('190')">Cuentas de Abono</a></li><li><a href="javascript:BiCEsend('654')">Aprobar Pagos/Transf.</a></li><li style="border-bottom-width: 0px;"><a href="javascript:BiCEsend('664')">Histórico de Pagos/Transf.</a></li></ul></li></ul></li><li class="ancho-menu menu-col-4"><a href="#">Inversiones</a><ul class="drop categorias"><!-- Segundo Nivel --><li>Consultas de Saldo<ul class="sub-menu-list"><!-- Tercer Nivel --><li style="border-bottom-width: 0px;"><a href="javascript:BiCEsend('2110')">Resumen de Inversiones</a></li></ul></li><li>Otros<ul class="sub-menu-list"><!-- Tercer Nivel --><li style="border-bottom-width: 0px;"><a href="javascript:BiCEsend('206')">Certificados Tributarios</a></li></ul></li></ul></li><li class="ancho-menu"><a class="selec" href="#">Divisas</a><ul class="drop categorias"><!-- Segundo Nivel --><li>Compra MX<ul class="sub-menu-list"><!-- Tercer Nivel --><li><a href="javascript:BiCEsend('2935')">Registrar</a></li><li><a href="javascript:BiCEsend('2936')">Consultar</a></li><li><a href="javascript:BiCEsend('2937')">Aprobar</a></li><li style="border-bottom-width: 0px;"><a href="javascript:BiCEsend('2938')">Liberar</a></li></ul></li></ul></li><li class="ancho-menu menu-col-2"><a href="#">Tarjeta Empresarial</a><ul class="drop categorias"><!-- Segundo Nivel --><li>Consultas<ul class="sub-menu-list"><!-- Tercer Nivel --><li style="border-bottom-width: 0px;"><a href="javascript:BiCEsend('151')">Estado Tarjeta</a></li></ul></li><li>Productos BiCE<ul class="sub-menu-list"><!-- Tercer Nivel --><li style="border-bottom-width: 0px;"><a href="javascript:BiCEsend('226')">Pago Tarjeta Empresarial</a></li></ul></li></ul></li><li class="ancho-menu menu-col-3"><a href="#">Sección Nóminas</a><ul class="drop categorias"><!-- Segundo Nivel --><li>Servicio Nóminas<ul class="sub-menu-list"><!-- Tercer Nivel --><li style="border-bottom-width: 0px;"><a href="javascript:BiCEsend('1201')">Registro</a></li></ul></li></ul></li><li class="ancho-menu menu-col-4"><a href="#">Sección Proveedores</a><ul class="drop categorias"><!-- Segundo Nivel --><li>Servicio Proveedores<ul class="sub-menu-list"><!-- Tercer Nivel --><li style="border-bottom-width: 0px;"><a href="javascript:BiCEsend('1245')">Solicitud Pronto Pago</a></li></ul></li></ul></li><li class="ancho-menu menu-col-5 menu-mas"><a href="#" class="ultimo">Más &gt;</a><ul id="menu" class="drop"><li class="no-dotted"><a href="#">BICEPASS</a><ul style="display: none;"><li>    BICEPASS</li><li><a href="javascript:BiCEsend('803')">Valide su BICEPASS</a></li><li>    FDA</li><li><a href="javascript:BiCEsend('5110')">Valide su FDA</a></li></ul></li><li class="no-dotted"><a href="#">Personalización</a><ul style="display: none;"><li>    Personalización</li><li><a href="javascript:BiCEsend('660')">Nombre Cuentas</a></li><li><a href="javascript:BiCEsend('662')">Accesos Directos</a></li><li><a href="javascript:BiCEsend('663')">Página de Inicio</a></li><li>    Adm. de Accesos</li><li><a href="javascript:BiCEsend('652')">Cambio de Clave</a></li><li><a href="javascript:BiCEsend('653')">Cambio de Clave Apoderado</a></li></ul></li><li class="no-dotted"><a href="#">Servicios</a><ul style="display: none;"><li>    Pagos</li><li><a href="javascript:BiCEsend('371')">Suscripción PAC</a></li><li>    Boletas y Facturas</li><li><a href="javascript:BiCEsend('380')">Consulta</a></li><li><a href="javascript:BiCEsend('653')">Cambio de Clave Apoderado</a></li><li>    Información</li><li><a href="javascript:BiCEsend('370')">Mapa del Sitio</a></li><li><a href="javascript:BiCEsend('374')">Formularios</a></li><li><a href="javascript:BiCEsend('651')">Indicadores Económicos</a></li><li>    Contratos</li><li><a href="javascript:BiCEsend('4203')">Consulta</a></li><li>    Boletas de Garantía</li><li><a href="javascript:BiCEsend('5095')">Registro</a></li><li><a href="javascript:BiCEsend('5096')">Aprobar</a></li><li><a href="javascript:BiCEsend('5097')">Consultar</a></li><li><a href="javascript:BiCEsend('5105')">Anular</a></li></ul></li><li class="no-dotted"><a href="#">Contáctenos</a><ul style="display: none;"><li>    Contáctenos</li><li><a href="javascript:BiCEsend('655')">Solicitud de Productos</a></li><li><a href="javascript:BiCEsend('656')">Contáctenos</a></li><li><a href="javascript:BiCEsend('976')">Teléfonos de Contacto</a></li><li><a href="javascript:BiCEsend('979')">Contacto con mi Ejecutivo</a></li></ul></li></ul></li>
+			</ul>
+        </div><!--fin nav-list-fw-->
+</div><!--fin cabecera-->
+<div class="sep1"><!--Separador_1--></div>
+
+								<script>
+	valor = location.href;
+	if (valor.indexOf("SII") &gt; 0)
+		window.location = 'https://www.bice.cl/bice/servlet/bice/template/bice%2Ctransferencias%2Cinstitucion%2CSII%2CError2.vm';
+</script>
+
+<script language="JavaScript">
+function JsLoginPersona()
+{
+	window.open('http://www.bice.cl/personas/index.php', '', 'height=500,width=800,toolbar=yes,location=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes');
+}
+function JsLoginEmpresa()
+{
+	window.open('http://www.bice.cl/empresas/index.php', '', 'height=500,width=800,toolbar=yes,location=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes');
+}
+</script>
+
+
+
+
+	<script language="javascript" src="https://www.bice.cl/templates/js/bice/finSesion.js"></script>
+	<script language="javascript">
+		var numeroID
+
+		function tx4010()
+		{
+			var rut='0762116618';
+			document.tr4010.elements["USUARIO"].value =	rut;
+			document.tr4010.submit();
+			return true;
+		}
+							if (!SFch('com.bice.portal.modules.security.Datos@77e2b3') || "JOSE JOAQUIN BENAVENTE COSTABAL:{}" == "")
+			{
+									alert("Ha caducado su sesión.");
+					window.location = 'https://www.bice.cl/bice/servlet/bice/template/bice%2Cutil%2CTimeOut.vm/SS/TR';
+							}
+			</script>
+	
+	
+		<form name="tr4010" method="post" action="https://www.bice.cl/bice/servlet/bice/template/bice%2Cresumen%2CResFormResumen.vm/action/ChangeUser">
+		<input value="TELE4010" class="field" name="SF_transaction" type="hidden" />
+		<input value="" class="field" name="USUARIO" type="hidden" />
+		<input value="Send" class="field" name="eventSubmit_doChangeUser" type="hidden" />
+    </form>	
+	
+			
+			
+						<br />
+						<!--CONTENIDO CENTRAL-->
+						<div id="contenido_columnas">
+																														<!-- COLUMNA IZQUIERDA -->
+								<div id="cont_izq_full_screen">
+									<script>
+    function BiCEsend()
+    {
+		var envio = "MAIN:"+arguments[0];
+ 		if (arguments[0].indexOf("MAIN:")!=-1)
+ 			envio = arguments[0];
+
+		document.valida.elements["id"].value = envio;
+
+		if (arguments.length &gt; 2)
+		{
+        	var i=2;
+        	while(i &lt; arguments.length )
+        	{
+				document.valida.elements[arguments[i]].value = arguments[i+1];
+        		i=i+2;
+        	}
+		}
+      else
+		{
+    		document.valida.elements["cod"].value = numeroID;
+    		document.valida.elements["categoria"].value = arguments[1];
+		}
+		if ((envio == "MAIN:106" || envio == "MAIN:121" || envio == "MAIN:116" || envio == "MAIN:128") &amp;&amp; arguments.length &lt; 2)
+		{
+			document.valida.elements["campo1"].value = "";
+			document.valida.elements["campo2"].value = "";
+			document.valida.elements["campo3"].value = "";
+			document.valida.elements["campo4"].value = "";
+			document.valida.elements["campo5"].value = "";
+			document.valida.elements["campo6"].value = "";
+			document.valida.elements["campo7"].value = "";
+			document.valida.elements["campo8"].value = "";
+		}
+    	if (envio == "MAIN:248")
+    	{
+    		document.valida.elements["cod"].value = document.valida.elements["campo1"].value;
+       	}
+       	if (envio == "MAIN:396")
+    	{
+    		window.open( "http://www.bice.cl/demos/demobicenet/index.html" ,'_blank' );
+       	}
+    	if (envio == "MAIN:430")
+    	{
+    		window.open( "http://www.bice.cl/inversiones/apv_inv.php?c=20051123890987&amp;id=20051111104403" ,'_blank' );
+       	}
+       	if (envio == "MAIN:431")
+    	{
+    		window.open( "http://www.bice.cl/inversiones/navTpl_inv.php?c=20060831163954" ,'_blank' );
+       	}
+       	if (envio == "MAIN:432")
+    	{
+    		window.open( "http://www.bice.cl/inversiones/navTpl_inv.php?c=20060831181000" ,'_blank' );
+
+       	}
+       	if (envio == "MAIN:433")
+    	{
+    		window.open( "http://www.bice.cl/inversiones/navTpl_inv.php?c=20060828121404",'_blank' );
+       	}
+       	if (envio == "MAIN:434")
+    	{
+    		window.open( "http://www.bice.cl/inversiones/navTpl_inv.php?c=20060905124329" ,'_blank' );
+       	}
+       	if (envio == "MAIN:435")
+    	{
+    		// window.open( "http://www.bice.cl/datos/docs/20040716163719/Informativo.pdf" ,'_blank' );
+       	}
+       	if (envio == "MAIN:170")
+    	{
+    		// window.open( "http://www.bice.cl/bice/ofertas/ofertas.htm" ,'_blank' );
+		}
+    	if (envio == "MAIN:192")
+    	{
+    		// window.open( "http://www.bice.cl/bice/ofertas/catalogo1.htm" ,'_blank' );
+		}
+   		if (envio == "MAIN:993")
+    	{
+            window.open( "https://www.bice.cl/bice/servlet/bice/template/bice%2Ctransferencias%2Cnomina%2Cpublico%2CTrfNominasAuten.vm" ,'_blank' );
+		}
+		if (envio == "MAIN:994")
+    	{
+            document.cruce.submit();
+		}
+    	
+
+    	if (envio == "MAIN:450")
+    	{
+    	    if ( document.valida.elements["campo1"].value != "2" )
+    	    {
+        	    document.valida.elements["id"].value = "MAIN:450";
+    			var rut='0762116618';
+    			document.valida.elements["cod"].value   = rut;
+
+        	    document.valida.elements["campo1"].value   = "2";
+        	    document.valida.submit();
+        	    return true;
+    	    }
+    	}
+    	else
+    	{
+    	    document.valida.submit();
+    	    return true;
+        }
+    }
+</script><script language="javascript" src="https://www.bice.cl/templates/js/bice/cta_cte.js"></script>
+<script language="javascript" src="https://www.bice.cl/templates/js/SFformat.js"></script>
+<script language="javascript" src="https://www.bice.cl/templates/js/SFutil.js"></script>
+<script language="javascript" src="https://www.bice.cl/templates/js/bice/Formatos.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script language="JavaScript" type="text/JavaScript">
+    function Open(Estado)
+    {
+        switch (Estado){
+        //Genera Archivo Excel
+        case 0: window.document.form1.action = "https://www.bice.cl/bice/servlet/bice/action/Excel";
+                window.document.form1.submit();
+                break;
+        //Genera Archivo Texto
+        case 1:
+            var winStats = "toolbar=no,left=300,top=100,width=450,height=200,directories=no,status=no,scrollbars=no,resize=no,menubar=no";
+            window.open('https://www.bice.cl/bice/servlet/bice/template/bice%2Ccuentas%2Ccc%2CPopUp%2CExportarCartola.vm' ,'', winStats );
+            break;
+        }
+    }
+    function openImg(tipoDoc, fchMov, numDoc, cargo, abono)
+    {
+    	cargo = FmtNumerico(cargo);
+    	abono = FmtNumerico(abono);
+    	//alert("tipoDoc="+tipoDoc+": fchMov="+fchMov+": numDoc="+numDoc+": cargo="+cargo+": abono="+abono);
+    	var monMov = "0";
+    	if (cargo != 0){
+    		monMov = SFMskCln(cargo,'0~9');
+    	} 
+    	if (abono != 0){
+	    	monMov = SFMskCln(abono,'0~9');
+    	}
+    	
+        document.frmImgCheque.monMov.value = monMov + "00";
+        document.frmImgCheque.numDoc.value = SFMskCln(numDoc,'0~9');
+        document.frmImgCheque.fchMov.value = fchMov.substring(0,2) + fchMov.substring(3) + 2015;
+
+        switch (tipoDoc){
+        //Imagen Tipo Doc 0  -  Depositos
+        case 0: 
+//        		document.frmImgCheque.action = "https://www.bice.cl/bice/servlet/bice/template/bice%2Ccuentas%2Ccc%2CCtaCartImgCheques.vm"; 
+                document.frmImgCheque.tipoDoc.value = "51";
+                document.frmImgCheque.submit();      
+                break;
+        //Imagen Tipo Doc 1  -  Cheques
+        case 1:
+//        		document.frmImgCheque.action = "https://www.bice.cl/bice/servlet/bice/template/bice%2Ccuentas%2Ccc%2CCtaCartImgCheques.vm"; 
+                document.frmImgCheque.tipoDoc.value = "01";
+                document.frmImgCheque.submit();      
+                break;
+        }    	
+    }
+    
+	// s es un numero (entero o flotante, con o sin signo)
+	function isNumber (s)
+	{   var i;
+	    var dotAppeared;
+	    dotAppeared = false;
+	    if (isEmpty(s)) 
+	       if (isNumber.arguments.length == 1) return false;
+	       else return (isNumber.arguments[1] == true);
+	    
+	    for (i = 0; i &lt; s.length; i++)
+	    {   
+	        var c = s.charAt(i);
+	        if( i != 0 ) {
+	            if ( c == "." ) {
+	                if( !dotAppeared )
+	                    dotAppeared = true;
+	                else
+	                    return false;
+	            } else     
+	                if (!isDigit(c)) return false;
+	        } else { 
+	            if ( c == "." ) {
+	                if( !dotAppeared )
+	                    dotAppeared = true;
+	                else
+	                    return false;
+	            } else     
+	                if (!isDigit(c) &amp;&amp; (c != "-") || (c == "+")) return false;
+	        }
+	    }
+	    return true;
+	}
+	
+	// c es un digito
+	function isDigit (c)
+	{   return ((c &gt;= "0") &amp;&amp; (c &lt;= "9"))
+	}
+	
+	// s es vacio
+	function isEmpty(s)
+	{   return ((s == null) || (s.length == 0))
+	}
+</script>
+ <form name="Bice" method="post" action="https://www.bice.cl/bice/servlet/bice/action/ExportCartProvT/tipocartola/3">
+    <input value="Enviar" class="field" name="eventSubmit_doCartolaTexto" type="hidden" />
+</form>
+ <form name="BiceImptSep" method="post" action="https://www.bice.cl/bice/servlet/bice/action/ExportCartProvT/tipocartola/4">
+    <input value="Enviar" class="field" name="eventSubmit_doCartolaTexto" type="hidden" />
+</form>
+ <form name="Swift" method="post" action="https://www.bice.cl/bice/servlet/bice/action/ExportCartProvT/tipocartola/5">
+    <input value="Enviar" class="field" name="eventSubmit_doCartolaTexto" type="hidden" />
+</form>
+
+<form name="frmImgCheque" action="https://www.bice.cl/bice/servlet/bice/template/bice%2Ccuentas%2Ccc%2CCtaCartImgCheques.vm" method="post">
+    <input value="000000000015766778" class="field" name="numCuentaSF" type="hidden" />
+	<input value="" class="field" name="numDoc" type="hidden" />
+	<input value="" class="field" name="monMov" type="hidden" />
+	<input value="" class="field" name="fchMov" type="hidden" />
+	<input value="" class="field" name="tipoDoc" type="hidden" />
+	<input value="00" class="field" name="tipoView" type="hidden" />
+	<input value="" class="field" name="mensajeCobro" type="hidden" />
+</form>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" name="contenido">
+    <tbody><tr valign="top">
+		<td valign="top" align="center">
+           <form name="form1" method="post" action="">
+           			<input type="hidden" name="eventSubmit_doCartolaProvisoria1" value="Exportar" /> 					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tbody><tr>
+							<td align="right" height="30" valign="top"><a href="javascript:BiCEsend('001','102')" class="alinkver666norm8subr"><img src="https://www.bice.cl/images/gfx/ico_acceso.gif" width="24" height="14" border="0" />Agregar a Accesos Directos</a></td>						</tr>
+					</tbody></table>				
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tbody><tr>
+						<td bgcolor="#003C7B" align="center" height="20">
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tbody><tr>
+									<td>
+										<span class="verFFFbold9">Cuenta Corriente Cta Corriente 1 </span>
+										<span class="ariFFFnorm8">(15-76677-8)</span>
+									</td>
+									<td align="right">										
+											<span class="ariFFFnorm8">Saldo Contable: <script language="javascript">document.writeln(FmtNumerico('3365304'));</script>3.365.304
+ </span>
+											<span class="verFFFbold8"> Disponible: <script language="javascript">document.writeln(FmtNumerico('3365304'));</script>3.365.304
+ </span>										
+									</td>
+								</tr>
+							</tbody></table>
+						</td>
+					</tr>
+					<tr>
+						<td height="2" background="https://www.bice.cl/images/gfx/sombra1.gif"><img src="https://www.bice.cl/images/gfx/shim.gif" width="1" height="2" /></td>
+					</tr>
+					<tr>
+						<td bgcolor="#999999" align="center" height="20">
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tbody><tr>
+									<td width="22%"><span class="ver333bold8">Cartola Provisoria</span></td>
+									<td width="18%" class="ari333norm8" align="left">Moneda: Peso ($)</td>
+<script language="javascript">
+function formatDate(fecha){
+	var str=""+fecha;
+	var fecha_out = str.substring(6) + "-"+str.substring(4,6) + "-" + str.substring(0,4);
+return fecha_out;
+}
+</script>
+									<td width="30%" class="ari333norm8" align="right">Desde: <script language="javascript">document.writeln(formatDate('20150831'))</script>31-08-2015
+ </td>
+									<td width="30%" class="ari333norm8" align="right">Hasta: 24-09-2015  </td>
+								</tr>
+							</tbody></table>
+						</td>
+					</tr>
+					<tr>
+						<td background="https://www.bice.cl/images/gfx/sombra2.gif" height="2"><img src="https://www.bice.cl/images/gfx/shim.gif" width="1" height="2" /></td>
+					</tr>
+				</tbody></table>
+				<br />				
+				
+									<table width="100%" border="0" cellspacing="0" cellpadding="2">
+						<tbody><tr>
+							<td class="ver333bold8" colspan="6" height="20" background="https://www.bice.cl/images/gfx/sombra5.gif" bgcolor="#CCCCCC"><img src="https://www.bice.cl/images/gfx/shim.gif" width="5" height="8" />Movimientos de la Cuenta</td>
+						</tr>					
+													<tr>
+								<td class="ver333bold8" width="6%" height="30">Fecha</td>
+								<td class="ver333bold8" width="12%" align="center">Documento</td>
+								<td class="ver333bold8" width="46%">Descripción<span class="ari999norm8"></span></td>
+								<td class="ver333bold8" width="12%" align="right">Cargo<span class="ari999norm8"></span></td>
+								<td class="ver333bold8" width="12%" align="right">Abono<span class="ari999norm8"></span></td>
+								<td class="ver333bold8" width="12%" align="right">Saldo<span class="ari999norm8"></span></td>
+							</tr>
+																																						<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">25-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por compra en PETROBRAS SANTA M el 24/09/2015 a las 15:36:34 hrs., monto 28004.  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('28004'));</script>28.004
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('3365304.0'));</script>3.365.304
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">24-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266111161156).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('199052'));</script>199.052
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('3393308.0'));</script>3.393.308
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">24-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266111161156).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('276519'));</script>276.519
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('3194256.0'));</script>3.194.256
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">24-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266000060646).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('204488'));</script>204.488
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('2917737.0'));</script>2.917.737
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">23-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039842239											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 13833082 B.Estado el 23/09/2015 a las 09:59 hrs. Ref:(39842239), monto $ 586.980,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('586980'));</script>586.980
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('2713249.0'));</script>2.713.249
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">23-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266111160237).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('160808'));</script>160.808
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('3300229.0'));</script>3.300.229
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">23-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266111160237).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('54907'));</script>54.907
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('3139421.0'));</script>3.139.421
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">23-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266000059724).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('281028'));</script>281.028
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('3084514.0'));</script>3.084.514
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">22-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo de Cambios remesa al exterior por US$ 1,956.00, (Ref:751-206-303035), monto $- más impuesto $-.  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('12476'));</script>12.476
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('2803486.0'));</script>2.803.486
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">22-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					39825641											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo Electronico, canal INTERNET, Venta MX Remesa USD 1.956,00 (Ref : 39825641)  el 22/09/2015 a las 11:09:45 hrs  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('1367127'));</script>1.367.127
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('2815962.0'));</script>2.815.962
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">22-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039823127											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 70231681 B.BCI el 22/09/2015 a las 09:27 hrs. Ref:(39823127), monto $ 163.625,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('163625'));</script>163.625
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4183089.0'));</script>4.183.089
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">22-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039823095											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 67589343 B.Santander el 22/09/2015 a las 09:25 hrs. Ref:(39823095), monto $ 40.000,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('40000'));</script>40.000
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4346714.0'));</script>4.346.714
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">22-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Crédito N° 1997720 - Cuota N° 14.  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('419095'));</script>419.095
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4386714.0'));</script>4.386.714
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">22-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266111159250).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('138238'));</script>138.238
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4805809.0'));</script>4.805.809
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">22-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266000058688).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('361879'));</script>361.879
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4667571.0'));</script>4.667.571
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">22-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por compra en CDC               el 21/09/2015 a las 15:57:31 hrs., monto 202300.  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('202300'));</script>202.300
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4305692.0'));</script>4.305.692
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">22-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039812627											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 40389296 B.Santander el 21/09/2015 a las 15:39 hrs. Ref:(39812627), monto $ 58.905,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('58905'));</script>58.905
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4507992.0'));</script>4.507.992
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">22-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por compra en CRISTALERIA LA PA el 21/09/2015 a las 15:15:30 hrs., monto 36190.  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('36190'));</script>36.190
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4566897.0'));</script>4.566.897
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">21-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266111158229).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('3924'));</script>3.924
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4603087.0'));</script>4.603.087
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">21-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266111158229).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('162770'));</script>162.770
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4599163.0'));</script>4.599.163
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">21-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266000057696).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('24437'));</script>24.437
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4436393.0'));</script>4.436.393
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">17-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039785199											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 68022673 B.Santander el 17/09/2015 a las 13:24 hrs. Ref:(39785199), monto $ 1.644.641,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('1644641'));</script>1.644.641
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4411956.0'));</script>4.411.956
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">17-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266111157268).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('558978'));</script>558.978
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('6056597.0'));</script>6.056.597
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">17-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266000056715).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('178435'));</script>178.435
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('5497619.0'));</script>5.497.619
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">16-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por compra en JUMBO MARKET LO C el 16/09/2015 a las 11:50:20 hrs., monto 10188.  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('10188'));</script>10.188
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('5319184.0'));</script>5.319.184
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">16-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039756545											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 76203841 B.BCI el 16/09/2015 a las 09:43 hrs. Ref:(39756545), monto $ 285.005,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('285005'));</script>285.005
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('5329372.0'));</script>5.329.372
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">16-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266111156280).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('195108'));</script>195.108
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('5614377.0'));</script>5.614.377
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">16-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266000055721).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('602375'));</script>602.375
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('5419269.0'));</script>5.419.269
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">16-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por compra en LIBRERIA NACIONAL el 15/09/2015 a las 14:08:50 hrs., monto 5950.  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('5950'));</script>5.950
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4816894.0'));</script>4.816.894
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">15-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Giro ATM REDBANC 829, el 15/09/2015 a las 13:59:03, monto $ 75.000,00.  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('75000'));</script>75.000
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4822844.0'));</script>4.822.844
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">15-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039733637											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 16384407 B.Estado el 15/09/2015 a las 10:48 hrs. Ref:(39733637), monto $ 85.000,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('85000'));</script>85.000
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4897844.0'));</script>4.897.844
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">15-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039733013											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 127534801 B.Security el 15/09/2015 a las 10:30 hrs. Ref:(39733013), monto $ 335.502,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('335502'));</script>335.502
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4982844.0'));</script>4.982.844
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">15-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266111155162).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('556939'));</script>556.939
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('5318346.0'));</script>5.318.346
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">15-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266000054529).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('396522'));</script>396.522
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4761407.0'));</script>4.761.407
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">15-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        											    												<script language="JavaScript">
+    													fchMov = "15-09";
+    													fchMov = 2015 + fchMov.substring(3) + fchMov.substring(0,2)
+    													fechaForm = parseInt('20150924');
+    													glosaAux = 'Cheque de Canje CASA MATRIZ';
+    													//numDoc = Number('Cheque de Canje CASA MATRIZ');                       //20120820
+    													numDoc = Number('02829717');
+    
+    														//if ( (parseInt(fchMov) &lt;= (parseInt("20150924"))) &amp;&amp; (glosaAux == 'Cheque pagado en canje') &amp;&amp; (numDocAux != numDoc) ) {                   //20120820
+    														if ( (parseInt(fchMov) &lt;= (parseInt("20150924"))) &amp;&amp; (numDocAux != numDoc) ) 
+    														{
+    															document.write('&lt;a href="#" OnClick="openImg(1, \'15-09\', \'02829717\', \'792838\', \'\');"&gt;02829717&lt;/a&gt;');
+    															numDocAux = numDoc;
+    														}
+    														else 
+    														{
+    															//if ( (parseInt(fchMov) &lt;= (parseInt("20150924")-1)) &amp;&amp; (glosaAux != 'Cheque pagado en canje')  )   {                                   //20120820
+    															if ( (parseInt(fchMov) &lt;= (parseInt("20150924")-1)) &amp;&amp; (numDocAux != numDoc))   
+    															{
+    																document.write('&lt;a href="#" OnClick="openImg(1, \'15-09\', \'02829717\', \'792838\', \'\');"&gt;02829717&lt;/a&gt;');
+    																numDocAux = numDoc;
+    															} else {
+    																	if (numDocAux != numDoc) {
+    																		document.write('02829717');
+    																	}	
+    															}
+    														}
+    													
+    												</script><a href="#" onclick="openImg(1, '15-09', '02829717', '792838', '');">02829717</a>
+    												                                                																															        																																										        																																										        																																										        																																										        																																										        																																																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cheque de Canje CASA MATRIZ  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('792838'));</script>792.838
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4364885.0'));</script>4.364.885
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">14-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266111154073).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('176463'));</script>176.463
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('5157723.0'));</script>5.157.723
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">14-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266000053534).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('494271'));</script>494.271
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4981260.0'));</script>4.981.260
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">14-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Pago Tarjeta VISA Nro.XXXX XXXX 0287  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('395169'));</script>395.169
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4486989.0'));</script>4.486.989
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">11-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266111153098).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('290240'));</script>290.240
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4882158.0'));</script>4.882.158
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">11-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266000052570).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('58519'));</script>58.519
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4591918.0'));</script>4.591.918
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">10-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266111152150).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('122556'));</script>122.556
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4533399.0'));</script>4.533.399
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">10-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266000051639).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('253694'));</script>253.694
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4410843.0'));</script>4.410.843
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">10-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039630156											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 45629412 B.BCI el 09/09/2015 a las 15:09 hrs. Ref:(39630156), monto $ 108.231,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('108231'));</script>108.231
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4157149.0'));</script>4.157.149
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">10-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039630120											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 63813397 B.Santander el 09/09/2015 a las 15:08 hrs. Ref:(39630120), monto $ 875.589,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('875589'));</script>875.589
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4265380.0'));</script>4.265.380
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">10-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039630028											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 123813201 B.Security el 09/09/2015 a las 15:04 hrs. Ref:(39630028), monto $ 285.600,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('285600'));</script>285.600
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('5140969.0'));</script>5.140.969
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">09-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266111151245).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('94101'));</script>94.101
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('5426569.0'));</script>5.426.569
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">09-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266111151245).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('54916'));</script>54.916
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('5332468.0'));</script>5.332.468
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">09-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266000050728).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('880712'));</script>880.712
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('5277552.0'));</script>5.277.552
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">09-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039606582											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 80674399 B.BCI el 08/09/2015 a las 14:53 hrs. Ref:(39606582), monto $ 110.917,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('110917'));</script>110.917
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4396840.0'));</script>4.396.840
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">09-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039606598											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 6967353 B.Santander el 08/09/2015 a las 14:54 hrs. Ref:(39606598), monto $ 40.918,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('40918'));</script>40.918
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4507757.0'));</script>4.507.757
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">08-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039599518											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 45629412 B.BCI el 08/09/2015 a las 11:05 hrs. Ref:(39599518), monto $ 1.742.858,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('1742858'));</script>1.742.858
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4548675.0'));</script>4.548.675
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">08-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039597557											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 68022673 B.Santander el 08/09/2015 a las 10:09 hrs. Ref:(39597557), monto $ 1.154.977,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('1154977'));</script>1.154.977
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('6291533.0'));</script>6.291.533
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">08-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266111150196).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('1157320'));</script>1.157.320
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('7446510.0'));</script>7.446.510
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">08-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266000049553).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('224417'));</script>224.417
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('6289190.0'));</script>6.289.190
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">08-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        											    												<script language="JavaScript">
+    													fchMov = "08-09";
+    													fchMov = 2015 + fchMov.substring(3) + fchMov.substring(0,2)
+    													fechaForm = parseInt('20150924');
+    													glosaAux = 'Cheque de Canje CASA MATRIZ';
+    													//numDoc = Number('Cheque de Canje CASA MATRIZ');                       //20120820
+    													numDoc = Number('02829691');
+    
+    														//if ( (parseInt(fchMov) &lt;= (parseInt("20150924"))) &amp;&amp; (glosaAux == 'Cheque pagado en canje') &amp;&amp; (numDocAux != numDoc) ) {                   //20120820
+    														if ( (parseInt(fchMov) &lt;= (parseInt("20150924"))) &amp;&amp; (numDocAux != numDoc) ) 
+    														{
+    															document.write('&lt;a href="#" OnClick="openImg(1, \'08-09\', \'02829691\', \'117015\', \'\');"&gt;02829691&lt;/a&gt;');
+    															numDocAux = numDoc;
+    														}
+    														else 
+    														{
+    															//if ( (parseInt(fchMov) &lt;= (parseInt("20150924")-1)) &amp;&amp; (glosaAux != 'Cheque pagado en canje')  )   {                                   //20120820
+    															if ( (parseInt(fchMov) &lt;= (parseInt("20150924")-1)) &amp;&amp; (numDocAux != numDoc))   
+    															{
+    																document.write('&lt;a href="#" OnClick="openImg(1, \'08-09\', \'02829691\', \'117015\', \'\');"&gt;02829691&lt;/a&gt;');
+    																numDocAux = numDoc;
+    															} else {
+    																	if (numDocAux != numDoc) {
+    																		document.write('02829691');
+    																	}	
+    															}
+    														}
+    													
+    												</script><a href="#" onclick="openImg(1, '08-09', '02829691', '117015', '');">02829691</a>
+    												                                                																															        																																										        																																										        																																										        																																										        																																										        																																																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cheque de Canje CASA MATRIZ  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('117015'));</script>117.015
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('6064773.0'));</script>6.064.773
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">07-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        											    												    													<script language="JavaScript">
+    														fchMov = "07-09";
+    														fchMov = 2015 + fchMov.substring(3) + fchMov.substring(0,2)
+    
+    														if (parseInt(fchMov) &lt;= (parseInt("20150924")-1)){
+    															document.write('&lt;a href="#" OnClick="openImg(0, \'07-09\', \'01194900\', \'\', \'673865\');"&gt;01194900&lt;/a&gt;');
+    														} else {
+    															document.write('01194900.');
+    														}
+    													</script><a href="#" onclick="openImg(0, '07-09', '01194900', '', '673865');">01194900</a>
+    													    												    																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Depositos con documentos misma plaza sucursal:  VITACURA  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('673865'));</script>673.865
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('6181788.0'));</script>6.181.788
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">07-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        											    												    													<script language="JavaScript">
+    														fchMov = "07-09";
+    														fchMov = 2015 + fchMov.substring(3) + fchMov.substring(0,2)
+    
+    														if (parseInt(fchMov) &lt;= (parseInt("20150924")-1)){
+    															document.write('&lt;a href="#" OnClick="openImg(0, \'07-09\', \'001194899\', \'\', \'1479550\');"&gt;001194899&lt;/a&gt;');
+    														} else {
+    															document.write('001194899.');
+    														}
+    													</script><a href="#" onclick="openImg(0, '07-09', '001194899', '', '1479550');">001194899</a>
+    													    												    																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Deposito en Efectivo Sucursal Vitacura  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('1479550'));</script>1.479.550
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('5507923.0'));</script>5.507.923
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">07-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266111149127).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('401023'));</script>401.023
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4028373.0'));</script>4.028.373
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">07-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266111149127).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('8817'));</script>8.817
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('3627350.0'));</script>3.627.350
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">07-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266000048589).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('424106'));</script>424.106
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('3618533.0'));</script>3.618.533
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">07-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Constructora Cen Nro. 762116618.  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('1305900'));</script>1.305.900
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('3194427.0'));</script>3.194.427
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">04-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039530996											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 55016081 B.BCI el 04/09/2015 a las 11:51 hrs. Ref:(39530996), monto $ 341.100,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('341100'));</script>341.100
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4500327.0'));</script>4.500.327
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">04-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039530930											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 66544605 B.Santander el 04/09/2015 a las 11:50 hrs. Ref:(39530930), monto $ 51.100,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('51100'));</script>51.100
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4841427.0'));</script>4.841.427
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">04-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039528971											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 45023565 B.BCI el 04/09/2015 a las 11:05 hrs. Ref:(39528971), monto $ 35.306,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('35306'));</script>35.306
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4892527.0'));</script>4.892.527
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">04-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039528913											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 5818085 B.Estado el 04/09/2015 a las 11:04 hrs. Ref:(39528913), monto $ 216.000,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('216000'));</script>216.000
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4927833.0'));</script>4.927.833
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">04-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266111148187).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('141182'));</script>141.182
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('5143833.0'));</script>5.143.833
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">04-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266111148187).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('228466'));</script>228.466
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('5002651.0'));</script>5.002.651
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">04-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266000047666).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('242455'));</script>242.455
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4774185.0'));</script>4.774.185
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">04-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039513858											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 5719780 B.Estado el 03/09/2015 a las 17:18 hrs. Ref:(39513858), monto $ 76.160,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('76160'));</script>76.160
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4531730.0'));</script>4.531.730
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">04-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039511212											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 15153202 B.Chile el 03/09/2015 a las 15:40 hrs. Ref:(39511212), monto $ 8.000,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('8000'));</script>8.000
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4607890.0'));</script>4.607.890
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">03-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266111147297).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('132375'));</script>132.375
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4615890.0'));</script>4.615.890
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">03-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266000046786).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('182926'));</script>182.926
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4483515.0'));</script>4.483.515
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">03-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039489873											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 68376254 B.Santander el 02/09/2015 a las 18:44 hrs. Ref:(39489873), monto $ 124.960,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('124960'));</script>124.960
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4300589.0'));</script>4.300.589
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">03-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039488684											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 970569602 B.Scotiabank el 02/09/2015 a las 17:56 hrs. Ref:(39488684), monto $ 63.374,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('63374'));</script>63.374
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4425549.0'));</script>4.425.549
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">02-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039473337											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 16384407 B.Estado el 02/09/2015 a las 10:04 hrs. Ref:(39473337), monto $ 303.847,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('303847'));</script>303.847
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4488923.0'));</script>4.488.923
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">02-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039473314											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 17782606 B.Estado el 02/09/2015 a las 10:03 hrs. Ref:(39473314), monto $ 387.021,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('387021'));</script>387.021
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('4792770.0'));</script>4.792.770
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">02-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039473274											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 45023565 B.BCI el 02/09/2015 a las 10:02 hrs. Ref:(39473274), monto $ 757.704,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('757704'));</script>757.704
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('5179791.0'));</script>5.179.791
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">02-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039473217											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 6967353 B.Santander el 02/09/2015 a las 10:00 hrs. Ref:(39473217), monto $ 869.881,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('869881'));</script>869.881
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('5937495.0'));</script>5.937.495
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">02-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039473179											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 127534801 B.Security el 02/09/2015 a las 09:59 hrs. Ref:(39473179), monto $ 526.721,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('526721'));</script>526.721
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('6807376.0'));</script>6.807.376
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">02-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039473245											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 970569602 B.Scotiabank el 02/09/2015 a las 10:01 hrs. Ref:(39473245), monto $ 837.651,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('837651'));</script>837.651
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('7334097.0'));</script>7.334.097
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">02-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266111146449).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('221590'));</script>221.590
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('8171748.0'));</script>8.171.748
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">02-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266000045911).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('455917'));</script>455.917
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('7950158.0'));</script>7.950.158
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">02-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000039460785											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por Transf. en línea a Cta. 13833082 B.Estado el 01/09/2015 a las 18:34 hrs. Ref:(39460785), monto $ 47.520,00  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('47520'));</script>47.520
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('7494241.0'));</script>7.494.241
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">01-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266111145354).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('1316817'));</script>1.316.817
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('7541761.0'));</script>7.541.761
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">01-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transferencia vía CCA, originador TRANSBANK S.A. (N.Ref:220266000044702).  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('464742'));</script>464.742
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('6224944.0'));</script>6.224.944
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">01-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        											    												<script language="JavaScript">
+    													fchMov = "01-09";
+    													fchMov = 2015 + fchMov.substring(3) + fchMov.substring(0,2)
+    													fechaForm = parseInt('20150924');
+    													glosaAux = 'Cheque de Canje CASA MATRIZ';
+    													//numDoc = Number('Cheque de Canje CASA MATRIZ');                       //20120820
+    													numDoc = Number('02829709');
+    
+    														//if ( (parseInt(fchMov) &lt;= (parseInt("20150924"))) &amp;&amp; (glosaAux == 'Cheque pagado en canje') &amp;&amp; (numDocAux != numDoc) ) {                   //20120820
+    														if ( (parseInt(fchMov) &lt;= (parseInt("20150924"))) &amp;&amp; (numDocAux != numDoc) ) 
+    														{
+    															document.write('&lt;a href="#" OnClick="openImg(1, \'01-09\', \'02829709\', \'870957\', \'\');"&gt;02829709&lt;/a&gt;');
+    															numDocAux = numDoc;
+    														}
+    														else 
+    														{
+    															//if ( (parseInt(fchMov) &lt;= (parseInt("20150924")-1)) &amp;&amp; (glosaAux != 'Cheque pagado en canje')  )   {                                   //20120820
+    															if ( (parseInt(fchMov) &lt;= (parseInt("20150924")-1)) &amp;&amp; (numDocAux != numDoc))   
+    															{
+    																document.write('&lt;a href="#" OnClick="openImg(1, \'01-09\', \'02829709\', \'870957\', \'\');"&gt;02829709&lt;/a&gt;');
+    																numDocAux = numDoc;
+    															} else {
+    																	if (numDocAux != numDoc) {
+    																		document.write('02829709');
+    																	}	
+    															}
+    														}
+    													
+    												</script><a href="#" onclick="openImg(1, '01-09', '02829709', '870957', '');">02829709</a>
+    												                                                																															        																																										        																																										        																																										        																																										        																																										        																																																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cheque de Canje CASA MATRIZ  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('870957'));</script>870.957
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('5760202.0'));</script>5.760.202
+</td>
+																	</tr>
+																															<tr bgcolor="#EFEFEF">
+									<td valign="top" class="ver000norm8" height="20">01-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					000019084505											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Abono por Transf. en Línea desde Cta. 15020063057 B.Falabella el 31/08/2015 a las 21:25 hrs. (Ref:000019084505)  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('29890'));</script>29.890
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('6631159.0'));</script>6.631.159
+</td>
+																	</tr>
+																															<tr bgcolor="">
+									<td valign="top" class="ver000norm8" height="20">01-09</td>
+									<td class="ver000norm8" align="center" valign="top">
+									    									    									    
+									        																		    
+									    																				        																																										        																																										        																																										<script language="JavaScript">
+										var numDocAux = '';	
+										</script>
+										
+																				        																																										        																																										        																																										        																																										        																																										        																																										        																																																					0000											
+																				
+									</td>								
+									<td valign="top" class="ari000norm8"> Cargo por compra en LIB NACIONAL COST el 31/08/2015 a las 20:06:35 hrs., monto 61490.  </td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('61490'));</script>61.490
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico(''));</script>0
+</td>
+									<td valign="top" class="ari000norm8" align="right" nowrap=""><script language="javascript">document.writeln(FmtNumerico('6601269.0'));</script>6.601.269
+</td>
+																	</tr>
+																		</tbody></table>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tbody><tr>
+							<td bgcolor="#CCCCCC">
+								<table width="100%" border="0" cellspacing="0" cellpadding="2">
+									<tbody><tr bgcolor="#999999">
+										<td class="ver333bold8" width="28%" align="right">Resumen<br />del Período</td>
+										<td width="12%" align="right" valign="bottom">
+											<span class="ari000norm8">Retenciones<br />último día</span><br />
+										</td>
+										<td width="12%" align="right" valign="bottom">
+											<span class="ari000norm8">Retenciones<br />más días</span><br />
+										</td>
+										<td width="12%" align="right" valign="bottom">
+											<span class="ari000norm8">Saldo Inicial</span><br />
+										</td>
+										<td width="12%" align="right" valign="bottom">
+											<span class="ari000norm8">Total Cargos</span><br />
+										</td>
+										<td width="12%" align="right" valign="bottom">
+											<span class="ari000norm8">Total Abonos</span><br />
+										</td>
+										<td width="12%" align="right" valign="bottom">
+											<span class="ari000norm8">Saldo Contable</span><br />
+										</td>
+									</tr>
+									<tr>
+										<td class="ver333bold8" width="28%" align="right"></td>
+										<td width="12%" align="right" valign="bottom" nowrap="">
+											<span class="ari333bold8"> <script language="javascript">document.writeln(FmtNumerico('0'));</script>0
+ </span>
+										</td>
+										<td width="12%" align="right" valign="bottom" nowrap="">
+											<span class="ari333bold8"> <script language="javascript">document.writeln(FmtNumerico('0'));</script>0
+</span>
+										</td>
+										<td width="12%" align="right" valign="bottom" nowrap="">
+											<span class="ari333bold8"> <script language="javascript">document.writeln(FmtNumerico('6662759'));</script>6.662.759
+ </span>
+										</td>
+										<td width="12%" align="right" valign="bottom" nowrap="">										
+											<span class="ari333bold8"> <script language="javascript">document.writeln(FmtNumerico('17864792'));</script>17.864.792
+</span>
+										</td>
+										<td width="12%" align="right" valign="bottom" nowrap="">
+											<span class="ari333bold8"> <script language="javascript">document.writeln(FmtNumerico('14567337'));</script>14.567.337
+  </span>
+										</td>
+										<td width="12%" align="right" valign="bottom" nowrap="">
+											<span class="ari333bold8"> <script language="javascript">document.writeln(FmtNumerico('3365304'));</script>3.365.304
+ </span>
+										</td>
+									</tr>
+								</tbody></table>
+							</td>
+						</tr>
+						<tr>
+							<td height="1" bgcolor="#666666"><img src="https://www.bice.cl/images/gfx/shim.gif" width="1" height="1" /></td>
+						</tr>
+						<tr>
+							<td align="center">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tbody><tr>
+										<td>
+											<span class="ari666norm8">Monto aprobado Línea Sobregiro:</span>
+										</td>
+										<td nowrap="">
+											<span class="ari666norm8"><script language="javascript">document.writeln(FmtNumerico('2000000'));</script>2.000.000
+</span>
+										</td>
+										<td align="right">
+											<span class="ari666norm8"> Saldo Contable:</span>
+										</td>
+										<td align="right" nowrap="">
+											<span class="ari666norm8"><script language="javascript">document.writeln(FmtNumerico('3365304'));</script>3.365.304
+</span>
+										</td>
+										<td align="right">
+											<span class="ver666bold7"> Saldo Disponible:</span>
+										</td>
+										<td align="right" nowrap="">
+											<span class="ver666bold7"><script language="javascript">document.writeln(FmtNumerico('3365304'));</script>3.365.304
+</span>
+										</td>
+									</tr>
+								</tbody></table>
+							</td>
+						</tr>
+
+					</tbody></table>
+										<br />
+					<input type="button" name="imprimir" onclick="javascript:window.print()" value="Imprimir" class="ari000norm8" />
+                    					<input type="button" name="ExportarExcel" onclick="Open(0)" value="Exportar a Excel" class="ari000norm8" />                    <!--mostrar boton solo empresa-->
+                                            <input type="button" name="Exportar" onclick="Open(1)" value="Exportar Formato Texto" class="ari000norm8" />
+                    			</form>			
+		</td>
+	</tr>
+</tbody></table>
+<form name="valida" method="post" action="https://www.bice.cl/bice/servlet/bice/action/ServiciosPortal">
+ 	<input value="MAIN:102" class="field" name="id" type="hidden" />
+	<input value="Send" class="field" name="eventSubmit_doPerformPortal" type="hidden" />
+	<input value="000000000015766778" class="field" name="cod" type="hidden" />
+	<input value="" class="field" name="mon" type="hidden" />
+	<input value="" class="field" name="campo1" type="hidden" />
+	<input value="" class="field" name="campo2" type="hidden" />
+	<input value="" class="field" name="campo3" type="hidden" />
+	<input value="" class="field" name="campo4" type="hidden" />
+	<input value="" class="field" name="campo5" type="hidden" />
+	<input value="" class="field" name="campo6" type="hidden" />
+	<input value="" class="field" name="campo7" type="hidden" />
+	<input value="" class="field" name="campo8" type="hidden" />
+	<input value="" class="field" name="campo9" type="hidden" />
+	<input value="" class="field" name="campo10" type="hidden" />
+	<input value="" class="field" name="campo11" type="hidden" />
+	<input value="" class="field" name="campo12" type="hidden" />
+	<input value="" class="field" name="campo13" type="hidden" />
+	<input value="" class="field" name="campo14" type="hidden" />
+	<input value="" class="field" name="campo15" type="hidden" />
+	<input value="undefined" class="field" name="categoria" type="hidden" />
+</form>
+<form action="https://qainte/transa/Cruce.asp" target="_blank" method="post" name="cruce">
+    <input value="1" class="field" name="cont" type="hidden" />
+    <input value="MDE0NTYzNzYzNQ==" class="field" name="FRUT" type="hidden" />
+    <input value="MDE0NTYzNzYzNQ==" class="field" name="RUT" type="hidden" />
+    <input value="U1lETkVZMDU=" class="field" name="CLAVE" type="hidden" />
+</form>
+<form action="https://www.bice.cl/bice/servlet/bice/template/bice%2Ctransferencias%2Cnomina%2Cpublico%2CTrfNominasAuten.vm" target="_blank" method="post" name="nomina">
+    <input value="1" class="field" name="cont" type="hidden" />
+</form>
+							
+									<br />
+									<table border="0" cellspacing="0" cellpadding="0" height="5" width="100%">
+										<tbody><tr>
+											<td align="center">
+												<span class="ari000norm8">Información referencial sujeta a confirmación<br />Infórmese sobre el límite de garantía estatal a los depósitos en su banco o en <a href="http://www.sbif.cl/" target="_blank">www.sbif.cl</a> <br /></span>
+												<img src="https://www.bice.cl/images/gfx/999999.gif" width="98%" height="1" />
+											</td>
+										</tr>
+									</tbody></table>	
+								</div><!-- fin cont_izq -->
+														
+						</div><!--fin contenido_columnas-->
+					</div><!--fin contenedor-->		
+			
+
+
+
+<form name="salida" action="https://www.bice.cl/bice/servlet/bice/action/Logout">
+</form>
+</body></html>
